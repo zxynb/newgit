@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>7、循环</title>
+	</head>
+	<body>
+		<script>
+			//条件控制语句 -switch 比 if 结构更加简洁清晰，使程序可读性更强
+			var x = new Date().getDay();
+			var y;
+			switch(x){
+				case 1 :
+					y = "星期一";
+					break;
+				case 2 :
+					y = "星期二";
+					break;
+				case 3 :
+					y = "星期三";
+					break;
+				case 4 :
+					y = "星期四";
+					break;
+				case 5 :
+					y = "星期五";
+					break;
+				case 6 :
+					y = "星期六";
+					break;
+				default:
+					y = "星期天"
+			}
+			// alert(y)
+			
+			
+			//循环-for
+			//格式：for(初始化;判断条件;自增){语句}
+			//当条件成立的时候，随增量循环遍历初始化变量并执行语句，否则不执行语句
+			// var sum = 0;
+			// for(var i =1;i<=100;i++){
+			// 	sum = sum +i;
+			// }
+			// alert(sum)
+			
+			//break 跳出 continue 跳过-注意：代码的先后顺序
+			// for(var i=1;i<=10;i++){
+			// 	if(i ==6){
+			// 		continue;
+			// 	}
+			// 	console.log(i)
+			// }
+			
+			//变体 for...in
+			// var o = {
+			// 	name:"Jack",
+			// 	age:18
+			// }
+			// var arr = [1,2,3]
+			// console.log(arr.length)
+			// for(var i=0;i<arr.length;i++){
+			// 	console.log(i)
+			// }
+			// for(var key in o){
+			// 	console.log(key)
+			// }
+			
+			// var arr = ["a","b","c"];
+			// for(var i=0;i<arr.length;i++){
+			// 	console.log(arr[i])
+			// }
+			//value 遍历的数组的内容
+			//index  遍历的数组的索引
+			//array 遍历的数组本身
+			// arr.forEach(function(value,index,array){
+			// 	console.log(value)
+			// 	console.log(index)
+			// 	console.log(array)
+			// })
+			
+			//while循环 只有一个条件判断，条件满足就不断循环，条件不满足则退出循环
+			//先判断在运行
+			// do..while 先运行在判断
+			var x = 0;
+			var n = 99;
+			// while(n>0){
+			// 	x = x+n;
+			// 	n = n-2;
+			// }
+			// console.log(x)
+			
+			// while(x>50){
+			// 	console.log("运行")
+			// }
+			// do{
+			// 	console.log("运行")
+			// }while(x>50)
+			
+			// for(var i =1;i<=9;i++){
+			// 	for(var j= 1;j<=i;j++){
+			// 		document.write(j+"*"+i+"="+j*i+"&nbsp;&nbsp;")
+			// 	}
+			// 	document.write("<br />")
+			// }
+			
+			
+			// 实例
+			function myx(){
+				//弹出输入框
+				var r = prompt("请输入行数","5")
+				for(var i=1;i<=r;i++){
+					for(var j =0;j<i;j++){
+						document.write("* ")
+					}
+					document.write("<br />")
+				}
+				for(var i=r-1;i>0;i--){
+					for(var j =0;j<i;j++){
+						document.write("* ")
+					}
+					document.write("<br />")
+				}
+			}
+			myx()
+			// 输出 菱形 
+			// 百钱买来百只鸡 公鸡小鸡数不齐
+			// 母一钱三公钱五 三雏钱一价格低
+			// 公鸡母鸡各多少 还有几只是小鸡
+		</script>
+	</body>
+</html>
